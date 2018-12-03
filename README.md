@@ -41,7 +41,7 @@ library https://mvnrepository.com/artifact/commons-net/commons-net/3.6
 			client.connect("ftp.barokahthailand.com",21);
 			client.login("barofhxz", "k7A!z5PN");
 			client.enterLocalPassiveMode();
-//			client.setFileType(FTP.BINARY_FILE_TYPE);
+			//client.setFileType(FTP.BINARY_FILE_TYPE);
 			
 			File filename = new File("C:\\Users\\pratyay\\Documents\\Test.xlsx");
 			FileInputStream fileInputStream = new FileInputStream(filename);
