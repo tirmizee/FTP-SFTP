@@ -53,10 +53,10 @@ library https://mvnrepository.com/artifact/commons-net/commons-net/3.6
 			e.printStackTrace();
 		} finally {
 			try {
-	            if (client != null && client.isConnected()) {
-	            	client.logout();
-	            	client.disconnect();
-	            }
+				if (client != null && client.isConnected()) {
+					client.logout();
+					client.disconnect();
+				}
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
