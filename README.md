@@ -38,8 +38,8 @@ library https://mvnrepository.com/artifact/commons-net/commons-net/3.6
 		
 		try {
 			
-			client.connect("ftp.barokahthailand.com",21);
-			client.login("barofhxz", "k7A!z5PN");
+			client.connect("ftp.xxxxxxxxx.com",21);
+			client.login("xxxx", "xxxxxx");
 			client.enterLocalPassiveMode();
 			//client.setFileType(FTP.BINARY_FILE_TYPE);
 			
