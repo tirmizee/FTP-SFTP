@@ -18,7 +18,7 @@ library https://mvnrepository.com/artifact/com.jcraft/jsch
 		    ChannelSftp sftpChannel = (ChannelSftp) channel;
 
 		    File fileToUpload = new File("C:\\Users\\pratyay\\Documents\\Test.xlsx");
-			sftpChannel.put(new FileInputStream(fileToUpload), "/uploads/Test.xlsx", ChannelSftp.OVERWRITE);
+		    sftpChannel.put(new FileInputStream(fileToUpload), "/uploads/Test.xlsx", ChannelSftp.OVERWRITE);
 
 		    sftpChannel.exit();
 		    session.disconnect();
