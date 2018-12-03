@@ -27,3 +27,38 @@ library https://mvnrepository.com/artifact/com.jcraft/jsch
 		    e.printStackTrace();  
 		}  
     }
+    
+# FTP
+library https://mvnrepository.com/artifact/commons-net/commons-net/3.6
+	
+	public static void main(String[] args) {
+		
+		FTPClient client = new FTPClient();
+		FileInputStream fis = null;
+		
+		try {
+			
+			client.connect("ftp.barokahthailand.com",21);
+			client.login("barofhxz", "k7A!z5PN");
+			client.enterLocalPassiveMode();
+//			client.setFileType(FTP.BINARY_FILE_TYPE);
+			
+			File filename = new File("C:\\Users\\pratyay\\Documents\\Test.xlsx");
+			FileInputStream fileInputStream = new FileInputStream(filename);
+			
+			boolean isComplete = client.storeFile("/domains/barokahthailand.com/photo/Test.xlsx", fileInputStream);
+			System.out.println(isComplete);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+	            if (client != null && client.isConnected()) {
+	            	client.logout();
+	            	client.disconnect();
+	            }
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+	}
